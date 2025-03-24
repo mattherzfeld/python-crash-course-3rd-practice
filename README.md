@@ -1,6 +1,5 @@
-# hello-world
+# python-crash-course-3rd-practice
 
-Hi Humans!
+This repository is for practice examples from the Python Crash Course, 3rd edition book.
 
-Hubot here, I like Node.js and coffeescript (that's what I'm made of!).
-I've had tacos on the moon and find them far superior to Earch tacos.
+
