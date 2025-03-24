@@ -24,3 +24,18 @@ print("This string contains a double quote: \"")
 # quotes inside of a string
 txt = "We are the so-called \"Vikings\" from the north."
 print(txt)
+
+#Whitespace
+favorite_language = "Python "
+print(favorite_language)
+print(len(favorite_language))
+
+#removes whitespace - the "r" stands for whitespace to the RIGHT
+favorite_language = favorite_language.rstrip()
+print(len(favorite_language))
+
+#for the left
+x = " Python"
+print(len(x))
+x = x.lstrip()
+print(len(x))
