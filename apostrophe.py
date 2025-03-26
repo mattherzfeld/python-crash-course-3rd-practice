@@ -25,7 +25,17 @@ famous_person = "Matt Herzfeld"
 print(f"As said by {famous_person}, \"Wherever you go, there you are.\"")
 
 #2-7 Stripping Names
-
-
+z = "\t  Mr. \nZ   "
+zz = "  Alice  "
+print(z)
+print(z.lstrip())
+print(z.rstrip())
+print(z.strip())
+print(zz.strip())
+zz = (zz.strip())
+print(len(zz))
 
 #2-8 File Extension
+filename = "python_notes.txt"
+filename = filename.removesuffix(".txt")
+print(filename)
