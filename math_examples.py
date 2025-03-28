@@ -33,6 +33,13 @@ x, y, z = 0, 1, 2
 # Constants
 MAX_CONNECTIONS = 5_000
 
+# More Examples
+t = 7
+s = 12
+x = s*7
+print(x)
+
 # The Zen of Python
 import this
 print(this)
+
