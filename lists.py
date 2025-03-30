@@ -91,3 +91,39 @@ print(f"Hi {guestList[1].title()}, I am pleased to inform you are still invited 
 #Clear out the list and print to double check
 del(guestList[:])
 print(guestList)
+
+#Sorting lists (permanently)
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort() #alphabetical order
+print(cars)
+cars.sort(reverse=True) #reverse alphabetical order
+print(cars)
+
+#Sorting lists (temporarily)
+print("\nHere is the original list:")
+print(cars)
+print("\nHere is the sorted list:")
+print(sorted(cars))
+print("\nHere is the original list again:")
+print(cars)
+
+cars.reverse()
+print(cars)
+
+print(len(cars))
+
+#3-8 Seeing the World
+locations = ["Bali", "Mexico City", "Ho Chi Minh City", "Kuala Lumpur", "Auckland"]
+print(locations)
+print(sorted(locations))
+print(locations) #to prove sorted function was temporary
+print(sorted(locations, reverse=True))
+print(locations) #to prove sorted function was temporary
+locations.reverse()
+print(locations)
+locations.reverse()
+print(locations) #back to original order
+locations.sort()
+print(locations) #should be alphabetical
+locations.sort(reverse=True)
+print(locations) #should be reverse alphabetical
