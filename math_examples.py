@@ -1,5 +1,7 @@
 #Doing math with Python
-#-----------------------
+"""-----------------------
+This is an example of multi-line comment.
+"""
 
 # Using Integers
 #Addition - Answer: 8
