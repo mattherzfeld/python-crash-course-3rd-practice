@@ -127,3 +127,20 @@ locations.sort()
 print(locations) #should be alphabetical
 locations.sort(reverse=True)
 print(locations) #should be reverse alphabetical
+
+#3-9 Dinner Guests
+print(len(guestList)) #because we cleared out that list
+print(len(locations)) #audibled and showed number of locations
+
+#3-10 Every Function
+unvisitedStates = ["Alaska", "Montana", "Idaho", "North Dakota", "Wyoming", "New Mexico", "Oklahoma", "Kansas", "Delaware", 
+                   "West Virginia", "Maine", "New Hampshire", "Vermont"]
+print(unvisitedStates)
+print(len(unvisitedStates))
+
+#Indexing
+new_motorcycles = ["honda", "yamaha", "suzuki"]
+print(new_motorcycles[-1]) #returns last item of list
+
+#list1 = []
+#print(list1[-1]) - this will error out
