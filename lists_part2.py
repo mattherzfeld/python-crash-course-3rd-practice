@@ -147,3 +147,19 @@ dimensions = (400, 100)
 print("\nModified dimensions:")
 for dimension in dimensions:
     print(dimension)
+
+#4-13 Buffet
+
+restaurantFoods = ("egg rolls", "frog legs", "sushi", "fried chicken", "pizza")
+
+for buffetFoods in restaurantFoods:
+    print(buffetFoods)
+
+#proven error
+#restaurantFoods[1] = "fruit"
+
+#modify the variable representing the tuple
+restaurantFoods = ("egg rolls", "veggies", "barbequed ribs", "fried chicken", "pizza")
+for buffetFoods in restaurantFoods:
+    print(buffetFoods)
+
