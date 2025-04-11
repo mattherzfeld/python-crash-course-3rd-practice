@@ -111,6 +111,7 @@ print("\nHere are the first three players on my team:")
 for player in players[:3]:
     print(player.title())
 
+#Copying a list example
 my_foods = ["pizza", "falafel", "carrot cake"]
 friend_foods = my_foods[:]
 
@@ -124,3 +125,25 @@ print(friend_foods)
 my_foods.append("cannoli")
 print(my_foods)
 print(friend_foods)
+
+#Tuples
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1])
+
+# the below would error out as tuples are immutable
+# dimensions[0] = 250
+
+for dimension in dimensions:
+    print(dimension)
+
+#writing over a tuple
+#you can't modify a tuple, but you can assign a new value to a variable that represents a tuple
+print("Original dimensions:")
+for dimension in dimensions:
+    print(dimension)
+
+dimensions = (400, 100)
+print("\nModified dimensions:")
+for dimension in dimensions:
+    print(dimension)
