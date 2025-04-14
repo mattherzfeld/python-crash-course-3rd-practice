@@ -172,6 +172,75 @@ languages = {"Python", "C", "Rust"}
 print(languages)
 
 # 6-4
+python_glossary["sets"] = "A built-in data type that represents an unordered collection of unique elements."
+python_glossary["dictionaries"] = "A built-in data structure that stores data in key-value pairs (key is immutable, value is mutable)."
+python_glossary["variables"] = "A symbolic name that refers to a memory location where a value can be stored (container for data)."
+python_glossary["functions"] = "A block of organized, reusable code that performs a specific task."
+python_glossary["classes"] = "Serves as a blueprint for creating objects, encapsulating data (attributes) and behavior (methods) into a single entity."
+
+for term, definition in python_glossary.items():
+    print(f"\n{term.title()}: {definition}")
+
+# 6-5
+rivers = {
+    "nile": "egypt",
+    "amazon": "brazil",
+    "thames": "uk",
+}
+
+for river, country in rivers.items():
+    if country == "uk":
+        print(f"The {river.title()} runs through {country.upper()}.")
+    else:
+        print(f"The {river.title()} runs through {country.title()}.")
+
+for river in rivers.keys():
+    print(river.title())
+
+for country in rivers.values():
+    if country == "uk":
+        print(country.upper())
+    else:
+        print(country.title())
+
+# 6-6
+polling_names = ["jen", "sarah", "edward", "phil", "barbara", "leo"]
+
+for name in polling_names:
+    print(f"Hi {name.title()}.")
+
+    if name in favorite_languages.keys():
+        print(f"\t{name.title()}, thank you for taking our poll!")
+    
+    if name not in favorite_languages.keys():
+        print(f"\t{name.title()}, I invite you take our programming language poll.")
+
+
+# Nesting
+alien_0 = {"color": "green", "points": 5}
+alien_1 = {"color": "yellow", "points": 10}
+alien_2 = {"color": "red", "points": 15}
+
+#aliens = [alien_0, alien_1, alien_2]
+
+#for alien in aliens:
+    #print(alien)
+
+# Make an empty list to store our aliens
+aliens = []
+
+# Create a fleet of 30 aliens
+for alien_number in range(30):
+    new_alien = {"color": "green", "points": 5, "speed": "slow"}
+    aliens.append(new_alien)
+
+# Show the first 5 aliens
+for alien in aliens[:5]:
+    print(alien)
+print("...\n")
+
+# Show how many aliens have been created.
+print(f"Total number of alines: {len(aliens)}")
 
 
 # Cleans up your terminal after viewing output
