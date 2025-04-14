@@ -108,6 +108,74 @@ else:
 
 print(f"Your admission cost is ${price}.")
 
+# Testing multiple conditions
 
+requested_toppings = ["mushrooms", "extra cheese"]
 
+if "mushrooms" in requested_toppings:
+    print ("Adding mushrooms.")
+if "pepperoni" in requested_toppings:
+    print("Adding pepperoni.")
+if "extra cheese" in requested_toppings:
+    print("Adding extra cheese.")
+
+print("\nFinished making your pizza!")
+
+# only use the if-elif-else chain if you only want one block of code to run**
+
+# 5-3
+alien_color = "red"
+
+if alien_color == "green":
+    print("Player has just earned 5 points!")
+
+alien_color = "green"
+
+if alien_color == "green":
+    print("Play has just earned 5 points!")
+
+# 5-4
+alien_color = "red"
+if alien_color == "green":
+    print("Player just earned 5 points.")
+else:
+    print("Player just earned 10 points.")
+
+# 5-5
+alien_color = "red"
+if alien_color == "green":
+    print("Player just earned 5 points.")
+elif alien_color == "yellow":
+    print("Player just earned 10 points.")
+else:
+    print("Player just earned 15 points.")
+
+# 5-6
+age = 35
+if age < 2:
+    print("You are a baby!")
+elif age >= 2 and age < 4:
+    print("You are a toddler!")
+elif age >= 4 and age < 13:
+    print("You are a kid!")
+elif age >= 13 and age < 20:
+    print("You are a teenager!")
+elif age >= 20 and age < 65:
+    print("You are an adult!")
+else:
+    print("You are an elder!")
+
+# 5-7
+favorite_fruits = ["blueberries", "mango", "raspberries", "grapes", "bananas"]
+
+if "blueberries" in favorite_fruits:
+    print("You really like blueberries!")
+if "pears" in favorite_fruits:
+    print("You really like pears!")
+if "mango" in favorite_fruits:
+    print("You really like mango!")
+if "grapes" in favorite_fruits:
+    print("You really like grapes!")
+if "bananas" in favorite_fruits:
+    print("You really like bananas!")
 
