@@ -97,9 +97,82 @@ print(f"Michael's favorite number is {favorite_numbers['Michael']}.")
 
 # 6-3
 
+python_glossary = {
+    "if statements": "A conditional statement that executes a block of code if a specified condition is true.",
+    "loops": "Control flow structures that allow a block of code to be executed repeatedly. They are used to automate repetitive tasks and iterate over sequences of data.",
+    "data types": "Classify values a variable can hold, determining operations that can be performed on it (i.e. int, str, float).",
+    "lists": "A mutable, ordered sequence of items.",
+    "tuples": "An ordered, immutable sequence of elements.",
+}
 
+print(f"If Statements: {python_glossary["if statements"]}\n")
+print(f"Loops: {python_glossary["loops"]}\n")
+print(f"Data Types: {python_glossary["data types"]}\n")
+print(f"Lists: {python_glossary["lists"]}\n")
+print(f"Tuples: {python_glossary["tuples"]}")
 
 # Looping thru a dictionary
+
+user_0 = {
+    "username": "enfermi",
+    "first": "enrico",
+    "last": "fermi",
+}
+
+for key, value in user_0.items():
+    print(f"\nKey: {key}")
+    print(f"Value: {value}")
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+    }
+
+for name, language in favorite_languages.items():
+    print(f"{name.title()}'s favorite language is {language.title()}.")
+
+#keys method
+for name in favorite_languages.keys():
+    print(name.title())
+
+for name in favorite_languages: #you can omit keys, but may be easier to display method so you know what is going on
+    print(name.title())
+
+friends = ["phil", "sarah"]
+for name in favorite_languages.keys():
+    print(f"Hi {name.title()}.")
+
+    if name in friends:
+        language = favorite_languages[name].title()
+        print(f"\t{name.title()}, I see you love {language}!")
+    
+    #checking if specific person took our coding poll
+    if "erin" not in favorite_languages.keys():
+        print("Erin, please take our poll!")
+
+# Looping thru in a particular order
+    # Displays in alphabetical order by name(key)
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, thank you for taking our poll.")
+
+# Looping thru all values in a dictionary
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+# What if we wanted to see unique values? Without repetition, this creates a set
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+# This is a set - in curly braces like dictionaries, but no key-value pairs
+languages = {"Python", "C", "Rust"}
+print(languages)
+
+# 6-4
+
 
 # Cleans up your terminal after viewing output
 #time.sleep(10) #10 second delay before clearing
