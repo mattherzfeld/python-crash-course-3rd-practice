@@ -179,3 +179,78 @@ if "grapes" in favorite_fruits:
 if "bananas" in favorite_fruits:
     print("You really like bananas!")
 
+requested_toppings = ["mushrooms", "green peppers", "extra cheese"]
+
+#Checking for special items
+for requested_topping in requested_toppings:
+    if requested_topping == "green peppers":
+        print("Sorry, we are out of green peppers right now.")
+    else:
+        print(f"Adding {requested_topping}.")
+
+print("\nFinished making your pizza!")
+
+#empty list check
+requested_toppings = []
+
+if requested_toppings: #this checks whether the list is actually populated
+    for requested_topping in requested_toppings:
+        print(f"Adding {request_topping}.")
+    print("\nFinished making your pizza!")
+else:
+    print("Are you sure you want a plain pizza?")
+
+#using multiple lists
+
+available_toppings = ["mushrooms", "olives", "green peppers", "pepperoni",
+                      "pineapple", "extra cheese"]
+requested_toppings = ["mushrooms", "french fries", "extra cheese"]
+
+for requested_topping in requested_toppings:
+    if requested_topping in available_toppings:
+        print(f"Adding {requested_topping}.")
+    else:
+        print(f"Sorry, we don't have {requested_topping}.")
+print("\nFinished making your pizza!")
+
+# 5-8
+user_names = ["admin", "Matt", "Jordan", "Rory", "Justin", "Bryson"]
+
+for user_name in user_names:
+    if user_name == "admin":
+        print(f"Hello {user_name}, would you like to see a status report?")
+    else:
+        print(f"Hello {user_name}, thank you for logging in again.")
+
+# 5-9
+#defining new list to show how empty list check works
+user_names1 = []
+if user_names1:
+    for user_name1 in user_names1:
+        if user_name1 == "admin":
+            print(f"Hello {user_name1}, would you like to see a status report?")
+        else: 
+            print(f"Hello {user_name1}, thank you for logging in again.")
+else:
+    print("We need to find some users ASAP!")
+
+# 5-10
+current_users = ["Matthew", "Mark", "Luke", "John", "Peter", "Paul"]
+new_users = ["Matthew", "Simon", "Judas", "Noah", "Isaac", "Luke"]
+
+for new_user in new_users:
+    if new_user in current_users:
+        print(f"The username ({new_user}) is already taken, you will need to enter a new username.")
+    else:
+        print(f"That username ({new_user}) is available.")
+
+# 5-11
+numbers = list(range(1,11))
+for number in numbers:
+    if number == 1:
+        print("1st")
+    elif number == 2:
+        print("2nd")
+    else:
+        print(str(number) + "th")
+
