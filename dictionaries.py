@@ -54,12 +54,53 @@ print(alien_0)
 del alien_0['points']
 print(alien_0)
 
+favorite_languages = {
+    "jen": "python",
+    "sarah": "c",
+    "edward": "rust",
+    "phil": "python",
+}
+
+language = favorite_languages["sarah"].title()
+print(f"Sarah's favorite language is {language}.")
+
+
+alien_0 = {"color": "green", "speed": "slow"}
+#print(alien_0["points"])
+
+# ^ we get a syntax error because the key we asked for does not exist.
+# if there's a chance of the above occurring, try using the get() method
+
+point_value = alien_0.get("points", "No point value assigned.")
+print(point_value)
+
+# 6-1
+person1 = {
+    "first_name": "Denise",
+    "last_name": "Smith",
+    "age": 43,
+    "city": "Las Cruces",
+}
+
+print(person1)
+
+# 6-2
+favorite_numbers = {
+    "Paul": 77,
+    "Jerome": 63,
+    "Dennis": 91,
+    "Michael": 23,
+    "Scottie": 33,
+}
+
+print(f"Michael's favorite number is {favorite_numbers['Michael']}.")
+
+# 6-3
 
 
 
-
-
+# Looping thru a dictionary
 
 # Cleans up your terminal after viewing output
-time.sleep(10) #10 second delay before clearing
-os.system('cls')
+#time.sleep(10) #10 second delay before clearing
+#os.system('cls')
