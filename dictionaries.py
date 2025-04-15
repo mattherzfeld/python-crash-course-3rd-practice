@@ -242,6 +242,119 @@ print("...\n")
 # Show how many aliens have been created.
 print(f"Total number of alines: {len(aliens)}")
 
+# Let's change the first 3 aliens to yellow now:
+for alien in aliens[:3]:
+    if alien["color"] == "green":
+        alien["color"] = "yellow"
+        alien["points"] = 10
+        alien["speed"] = "medium"
+    elif alien['color'] == 'yellow':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+# Show the first 5 aliens again:
+for alien in aliens[:5]:
+    print(alien)
+print("...\n")
+print(f"Total number of alines: {len(aliens)}\n") #Confirm we still have 30 total
+
+# Pizza Example
+pizza = {
+    "crust": "thick",
+    "toppings": ["mushrooms", "extra cheese"],
+}
+
+# Summarize the order.
+print(f"You ordered a {pizza["crust"]}-crust pizza "
+      "with the following toppings:")
+
+for topping in pizza ["toppings"]:
+    print(f"\t{topping}")
+
+favorite_languages = {
+    "jen": ["python", "rust"],
+    "sarah": ["c"],
+    "edward": ["rust", "go"],
+    "phil": ["python", "haskell"],
+    "brock": [] # testing if else statement works below
+}
+
+for name, languages in favorite_languages.items():
+    if len(languages) > 1:
+        print(f"\n{name.title()}'s favorite languages are:")
+    elif len(languages) == 1:
+        print(f"\n{name.title()}'s favorite language are:")
+    else:
+        print(f"\n{name.title()} does not have any favorite languages.")
+
+    for language in languages:
+        print(f"\t{language.title()}")
+        
+
+# A Dictionary in a Dictionary
+
+users = {
+    "aeinstein": {
+        "first": "albert",
+        "last": "einstein",
+        "location": "princeton",
+    },
+    "mcurie": {
+        "first": "marie",
+        "last": "curie",
+        "location": "paris",
+    }
+}
+
+for username, user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info["first"]} {user_info["last"]}"
+    location = user_info["location"]
+
+    print(f"\tFull name: {full_name.title()}")
+    print(f"\tLocation: {location.title()}")
+
+# 6-7
+people = {
+
+    "person1": {
+        "first_name": "Denise",
+        "last_name": "Smith",
+        "age": 43,
+        "city": "Las Cruces",
+    },
+
+    "person2": {
+        "first_name": "Rob",
+        "last_name": "Johnson",
+        "age": 33,
+        "city": "Austin",
+    },
+
+    "person3": {
+        "first_name": "Richard",
+        "last_name": "Bolton",
+        "age": 41,
+        "city": "San Antonio",
+    },
+}
+
+
+for persons, persons_info in people.items():
+
+    full_name = f"{persons_info["first_name"]} {persons_info["last_name"]}"
+    age = f"{persons_info["age"]}"
+    location = f"{persons_info["city"]}"
+    print(f"\nPerson_ID: {persons}")
+    print(f"\tFull Name: {full_name}")
+    print(f"\tAge: {age}")
+    print(f"\tLocation: {location}")
+
+# 6-8
+
+
+
 
 # Cleans up your terminal after viewing output
 #time.sleep(10) #10 second delay before clearing
