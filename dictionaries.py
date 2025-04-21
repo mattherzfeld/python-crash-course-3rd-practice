@@ -418,6 +418,28 @@ for the_cities, city_info in cities.items():
     print(f"\tPopulation: {city_info["Population"]}")
     print(f"\tFact: {city_info["Fact"]}")
 
+# 6-12
+
+airlines = {
+    "Southwest Airlines": {
+        "Headquarters": "Dallas, TX",
+
+    },
+
+    "United Airlines": {
+        "Headquarters": "Chicago, IL",
+    },
+
+    "Delta Airlines": {
+        "Headquarters": "Atlanta, GA",
+    },
+
+    "American Airlines": {
+        "Headquarters": "Fort Worth, TX"
+    },
+
+}
+
 # Cleans up your terminal after viewing output
 #time.sleep(10) #10 second delay before clearing
 #os.system('cls')
