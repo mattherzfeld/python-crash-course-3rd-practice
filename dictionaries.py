@@ -352,9 +352,41 @@ for persons, persons_info in people.items():
     print(f"\tLocation: {location}")
 
 # 6-8
+pets = []
 
+pet_0 = {"kind": "dog", "owner_name": "Chad"}
+pet_1 = {"kind": "penguin", "owner_name": "Mr. Popper"}
+pet_2 = {"kind": "cat", "owner_name": "Mr. Cat"}
 
+pets.append(pet_0)
+pets.append(pet_1)
+pets.append(pet_2)
 
+for pet in pets:
+    print(pet)
+
+# 6-9
+favorite_places = {
+    "Matt": "Texas",
+    "Denise": "Amsterdam",
+    "Ralph": "Jail",
+}
+
+for names, place in favorite_places.items():
+    print(f"{names}'s favorite place is {place}.")
+
+# 6-10
+
+favorite_numbers = {
+    "Paul": [77, 92],
+    "Jerome": [63, 99],
+    "Dennis": [91, 94],
+    "Michael": [23, 45],
+    "Scottie": [33, 30],
+}
+
+for name, numbers in favorite_numbers.items():
+    print(f"{name}'s favorite numbers are {numbers[0]} and {numbers[1]}.")
 
 # Cleans up your terminal after viewing output
 #time.sleep(10) #10 second delay before clearing
