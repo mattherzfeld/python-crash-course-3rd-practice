@@ -79,7 +79,7 @@ while True:
 
     break
 
-"""
+
 
 # 7-6
 
@@ -144,7 +144,7 @@ while True:
         print("That will be $15 please.")
 
     break
-
+"""
 # 7-7
 """
 x = 1
@@ -152,4 +152,85 @@ while x <= 5:
     print(x)
 
 """
+
+# Using a while loop with lists/dictionaries
+
+# users that need to be confirmed
+unconfirmed_users = ["alice", "brian", "candace"]
+# initial empty list for confirmed users
+confirmed_users = []
+
+# use pop method to take last unconfirmed user and assign to current_user variable
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop()
+
+    # print statement saying verifying that popped user and append it to the confiremed_user list
+    print(f"Verifying user: {current_user.title()}")
+    confirmed_users.append(current_user)
+
+# Display all confirmed users
+print("\nThe following users have been confirmed:")
+for confirmed_user in confirmed_users:
+    print(confirmed_user.title())
+
+# Removing all instances of specific values from a list
+
+pets = ["dog", "cat", "dog", "goldfish", "cat", "rabbit", "cat"]
+print(pets)
+
+# Loops thru removing each instance of "cat" until none are left and exits loop
+while "cat" in pets:
+    pets.remove("cat")
+
+print(pets)
+
+# Filling a dictionary with user input
+
+# Start with an empty dictionary where we will end up storing participant's name and response
+responses = {}
+
+polling_active = True # Set Flag
+
+while polling_active:
+    # Prompt for the person's name/response
+    name = input("\nWhat is your name? ")
+    response = input("\nWhat mountain would you like to climb someday? ")
+
+    # Store the response in a dictionary
+    responses[name] = response
+
+    # Find out if anyone else is going to be taking the poll
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == "no":
+        polling_active = False
+
+# Polling is complete / show the results
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name} would like to climb {response}.")
+
+# 7-8
+
+sandwich_orders = ["club", "italian", "meatball", "blt", "vegetarian"]
+
+finished_sandwiches = []
+
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+
+    if current_sandwich == "blt":
+        print(f"I have finished making your {current_sandwich.upper()} sandwich.")
+    else:
+        print(f"I have finished making your {current_sandwich.title()} sandwich.")
+
+    finished_sandwiches.append(current_sandwich)
+
+print("\nThe following sandiwches have been prepared:")
+for current_sandwich in finished_sandwiches:
+    if current_sandwich == "blt":
+        print(current_sandwich.upper())
+    else:
+        print(current_sandwich.title())
+
+# 7-9
 
