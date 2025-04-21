@@ -388,6 +388,36 @@ favorite_numbers = {
 for name, numbers in favorite_numbers.items():
     print(f"{name}'s favorite numbers are {numbers[0]} and {numbers[1]}.")
 
+# 6-11
+
+cities = {
+    "West Allis": 
+        {
+            "Country": "United States",
+            "Population": "50k",
+            "Fact": "Affectionately known as \"Dirty Stallis\".",
+        },
+    "Austin":
+        {
+            "Country": "United States",
+            "Population": "1MM",
+            "Fact": "The Capital of Texas.",
+        },
+    "Chicago":
+        {
+            "Country": "United States",
+            "Population": "2.7MM",
+            "Fact": "Known as \"The Windy City\".",
+        },
+}
+
+for the_cities, city_info in cities.items():
+
+    print(f"\nCity: {the_cities}")
+    print(f"\tCountry: {city_info["Country"]}")
+    print(f"\tPopulation: {city_info["Population"]}")
+    print(f"\tFact: {city_info["Fact"]}")
+
 # Cleans up your terminal after viewing output
 #time.sleep(10) #10 second delay before clearing
 #os.system('cls')
