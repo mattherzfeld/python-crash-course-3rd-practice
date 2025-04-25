@@ -265,3 +265,27 @@ for current_sandwich in finished_sandwiches:
         print(current_sandwich.upper())
     else:
         print(current_sandwich.title())
+
+# 7-10
+
+responses = {}
+
+polling_active = True # Set Flag
+
+while polling_active:
+    # Prompt for the person's name/response
+    name = input("\nWhat is your name? ")
+    response = input("\nIf you could visit one place in the world, where would you go? ")
+
+    # Store the response in a dictionary
+    responses[name] = response
+
+    # Find out if anyone else is going to be taking the poll
+    repeat = input("Would you like to let another person respond? (yes/no) ")
+    if repeat == "no":
+        polling_active = False
+
+# Polling is complete / show the results
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name} would like to visit {response}.")
