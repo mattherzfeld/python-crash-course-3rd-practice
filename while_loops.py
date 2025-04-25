@@ -211,6 +211,8 @@ for name, response in responses.items():
 
 # 7-8
 
+"""
+
 sandwich_orders = ["club", "italian", "meatball", "blt", "vegetarian"]
 
 finished_sandwiches = []
@@ -232,5 +234,34 @@ for current_sandwich in finished_sandwiches:
     else:
         print(current_sandwich.title())
 
+"""
+
 # 7-9
 
+sandwich_orders = ["club", "pastrami", "italian", "pastrami", "meatball", "blt", "pastrami", "vegetarian"]
+
+finished_sandwiches = []
+
+print("Sorry, we actually ran out of pastrami!")
+
+while "pastrami" in sandwich_orders:
+    sandwich_orders.remove("pastrami")
+
+print("I removed pastrami from your sandwich list.")
+
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+
+    if current_sandwich == "blt":
+        print(f"I have finished making your {current_sandwich.upper()} sandwich.")
+    else:
+        print(f"I have finished making your {current_sandwich.title()} sandwich.")
+
+    finished_sandwiches.append(current_sandwich)
+
+print("\nThe following sandiwches have been prepared:")
+for current_sandwich in finished_sandwiches:
+    if current_sandwich == "blt":
+        print(current_sandwich.upper())
+    else:
+        print(current_sandwich.title())
