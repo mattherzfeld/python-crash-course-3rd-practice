@@ -61,12 +61,43 @@ describe_pet(pet_name='willie') #animal_type is already defaulted to "dog"
 
 # Equivalent Function Calls
 
+#A dog named Willie
 describe_pet("willie")
 describe_pet(pet_name="willie")
 
 print("-------- BUFFER --------")
 
+#A hamster named Harry
 describe_pet("harry", "hamster")
 describe_pet(pet_name="harry", animal_type="hamster")
 describe_pet(animal_type="hamster", pet_name="harry")
+
+# 8-3
+
+def make_shirt(size, text):
+    print(f"\nThe shirt you selected is size {size} and says, \"{text}\".")
+
+make_shirt(size="Large", text="Cheers fellas!")
+make_shirt("Medium", "Hookin' Horns!")
+
+# 8-4
+
+def make_shirt(size="Large", text="I love Python."):
+    print(f"\nThe shirt you selected is size {size} and says, \"{text}\".")
+
+make_shirt() #default
+make_shirt(size="Medium") #new size with default message
+make_shirt(size="Small", text="I love Java.") #new size with new message
+
+# 8-5
+
+def describe_city(city, country="Germany"):
+    print(f"\n{city} is in {country}.")
+
+describe_city("Berlin")
+describe_city(city="Munich", country="Germany")
+describe_city(city="Chicago", country="the United States")
+
+
+
 
