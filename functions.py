@@ -98,6 +98,56 @@ describe_city("Berlin")
 describe_city(city="Munich", country="Germany")
 describe_city(city="Chicago", country="the United States")
 
+# Return Values
 
+def get_formatted_name(first_name, last_name):
+    """Return a full name, neatly formatted."""
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
 
+musician = get_formatted_name("jimi", "hendrix")
+print(musician)
+
+# Making an Argument Optional
+
+def get_formatted_name(first_name, middle_name, last_name):
+    """Return a full name, neatly formatted."""
+    full_name = f"{first_name} {middle_name} {last_name}"
+    return full_name.title()
+
+musician = get_formatted_name("john", "lee", "hooker")
+print(musician)
+
+def get_formatted_name(first_name, last_name, middle_name = ""):
+    """Return a full name, neatly formatted."""
+    if middle_name:
+        full_name = f"{first_name} {middle_name} {last_name}"
+    else:
+        full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+musician = get_formatted_name("john", "booty", "david")
+print(musician)
+
+# Returning a Dictionary
+
+def build_person(first_name, last_name):
+    """Return a dictionary of information about a person."""
+    person = {"first": first_name, "last": last_name}
+    return person
+
+musician = build_person("jimi", "hendrix")
+print(musician)
+
+def build_person(first_name, last_name, age = None):
+    """Return a dictionary of information about a person."""
+    person = {"first": first_name, "last": last_name}
+    if age:
+        person["age"] = age
+    return person
+
+musician = build_person("jimi", "hendrix", age = 27)
+another_musician = build_person("paul", "mccartney") #age remains default
+print(musician)
+print(another_musician)
 
