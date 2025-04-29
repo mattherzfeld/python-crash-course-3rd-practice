@@ -181,3 +181,14 @@ while True:
 
     formatted_name = get_formatted_name(f_name, l_name)
     print(f"\nHello, {formatted_name}!")
+
+# 8-6
+
+def get_city_country(city, country):
+    """Returns city/country pairs as a String"""
+    cc_pair = f"{city}, {country}"
+    return cc_pair.title()
+
+visit1 = get_city_country("Santiago", "Chile")
+visit2 = get_city_country("Chicago", "USA")
+visit3 = get_city_country("Mexico City", "Mexico")

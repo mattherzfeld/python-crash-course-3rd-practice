@@ -40,6 +40,8 @@ print(len(x))
 x = x.lstrip()
 print(len(x))
 
+#removeprefix method
 nostarch_url = "http://nostarch.com"
 nostarch_url = nostarch_url.removeprefix("http://")
 print(nostarch_url)
+
