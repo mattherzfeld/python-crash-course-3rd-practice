@@ -1,5 +1,4 @@
 # Functions
-
 def greet_user():
     """ Display simple greeting"""
     print("Hello!")
@@ -192,3 +191,49 @@ def get_city_country(city, country):
 visit1 = get_city_country("Santiago", "Chile")
 visit2 = get_city_country("Chicago", "USA")
 visit3 = get_city_country("Mexico City", "Mexico")
+print(visit1)
+print(visit2)
+print(visit3)
+
+# 8-7
+
+def make_album(artist, album, track=None):
+    """Returns a dictionary containing artist name / album title"""
+    music = {"Artist Name": artist, "Album Title": album}
+    if track:
+        music["track"] = f"Number of Tracks: {track}"
+    return music
+
+album1 = make_album("Kanye West", "Graduation")
+album2 = make_album("The Beatles", "Magical Mystery Tour")
+album3 = make_album("Thirty Seconds to Mars", "A Beautiful Lie", 12)
+
+print(album1)
+print(album2)
+print(album3)
+
+# 8-8
+
+def make_album(artist, album, track=None):
+    """Returns a dictionary containing artist name / album title"""
+    music = {"Artist Name": artist, "Album Title": album}
+    if track:
+        music["track"] = f"Number of Tracks: {track}"
+    return music
+
+while True:
+    print("\nTell me an artist/album:")
+    print("(enter 'q'  at any time to quit)")
+
+    artist = input("Artist: ")
+    if artist == 'q':
+        break
+
+    album = input("Album: ")
+    if album == 'q':
+        break
+
+    formatted_artist_album = make_album(artist, album)
+    print(f"\nResults:\n\t{formatted_artist_album}!")
+
+# Passing a List
