@@ -292,3 +292,13 @@ print_models(unprinted_designs[:], completed_models) #the slice notation makes a
 
 # 8-9 Messages
 
+def show_messages(messages):
+    for message in messages:
+        the_message = f"{message}"
+        print(the_message)
+
+messages = ["Welcome to Wrexham", "Howdy, folks!", "This is yet another message."]
+
+show_messages(messages)
+
+
