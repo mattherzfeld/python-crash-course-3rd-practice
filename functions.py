@@ -287,3 +287,8 @@ completed_models = []
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
 
+# Copying a List
+print_models(unprinted_designs[:], completed_models) #the slice notation makes a copy
+
+# 8-9 Messages
+
