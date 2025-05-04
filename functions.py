@@ -383,3 +383,33 @@ user_profile = build_profile("albert", "einstein",
 print(user_profile)
 
 #Often will see *kwargs used to collect nonspecific keyword arguments
+
+# 8-12
+
+def sandwich_creation(*args):
+    """Function that takes in as many sandwich topping inputs as user provides."""
+    print("\nSandwich will have the following items included:")
+    for arg in args:
+        print(f"\t- {arg}")
+
+sandwich_creation("ham", "cheese", "lettuce", "onion", "tomato")
+
+# 8-13
+    #Uses exercise 8-11
+
+user_profile = build_profile("matt", "herzfeld",
+                             location="chicago",
+                             favorite_language="python",
+                             alma_mater = "auburn")
+
+print(user_profile)
+
+# 8-14
+
+
+
+
+
+    
+    
+
