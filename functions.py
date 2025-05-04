@@ -323,6 +323,18 @@ def show_sent_messages(sent_messages):
 
 show_messages(messages, sent_messages)
 show_sent_messages(sent_messages)
-# 8-11
 
+# 8-11
+print("\nThis is now the output for 8-11:")
+
+# Re-populate list data from prior exercise:
+messages = ["Welcome to Wrexham", "Howdy, folks!", "This is yet another message."]
+sent_messages = []
+
+messages_copy = messages[:] #Create copy
+
+show_messages(messages_copy, sent_messages) #Call Function with copied list
+
+print(messages) #Checking if original list is still intact
+print(messages_copy) #Checking that copied list is now empty
 
