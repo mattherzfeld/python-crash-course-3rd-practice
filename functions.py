@@ -338,3 +338,48 @@ show_messages(messages_copy, sent_messages) #Call Function with copied list
 print(messages) #Checking if original list is still intact
 print(messages_copy) #Checking that copied list is now empty
 
+# Passing an Arbitrary Number of Arguments
+
+def make_pizza(*toppings):
+    """Print the list of toppings that have been requested."""
+    print(toppings)
+
+make_pizza("pepperoni")
+make_pizza("mushrooms","green peppers", "extra cheese")
+
+def make_pizza(*toppings):
+    """Summarize the pizza we are about to make."""
+    print("\nMaking a pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza("pepperoni")
+make_pizza("mushrooms","green peppers", "extra cheese")
+
+# Mixing Positional and Arbitrary Arguments
+
+def make_pizza(size, *toppings): # the parameter that accepts an arbitrary number of arguments must be last
+    """Summarize the pizza we are about to make."""
+    print(f"Making a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+make_pizza(16, "pepperoni")
+make_pizza(12, "mushrooms", "green peppers", "extra cheese")
+
+#Note, you'll often see *args used quite a bit
+
+# Using arbitrary keyword arguments
+
+def build_profile(first, last, **user_info): # the double asterisks is for dictionary key-value pair creation
+    """Build a dictionary containing everything we know about a user."""
+    user_info["first_name"] = first
+    user_info["last_name"] = last
+    return user_info
+
+user_profile = build_profile("albert", "einstein",
+                             location="princeton",
+                             field = "physics")
+print(user_profile)
+
+#Often will see *kwargs used to collect nonspecific keyword arguments
