@@ -311,16 +311,18 @@ def show_messages(messages, sent_messages):
         the_message = f"{message}"
         print(the_message)
 
-while messages:
-    current_message = messages.pop()
-    print(f"Sending message... '{current_message}' is now sent.")
-    sent_messages.append(current_message)
+    while messages:
+        current_message = messages.pop()
+        print(f"Sending message... '{current_message}' is now sent.")
+        sent_messages.append(current_message)
 
 def show_sent_messages(sent_messages):
     print("The following messages have now been sent:")
     for sent_message in sent_messages:
         print(sent_message)
 
+show_messages(messages, sent_messages)
+show_sent_messages(sent_messages)
 # 8-11
 
 
