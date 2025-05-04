@@ -302,21 +302,25 @@ messages = ["Welcome to Wrexham", "Howdy, folks!", "This is yet another message.
 show_messages(messages)
 
 # 8-10
+messages = ["Welcome to Wrexham", "Howdy, folks!", "This is yet another message."]
+sent_messages = []
 
-def show_messages(messages):
+print("\nThis is exercise 8-10:")
+def show_messages(messages, sent_messages):
     for message in messages:
         the_message = f"{message}"
         print(the_message)
 
-messages = ["Welcome to Wrexham", "Howdy, folks!", "This is yet another message."]
-sent_messages = []
-
 while messages:
     current_message = messages.pop()
-    print("Sending message...")
+    print(f"Sending message... '{current_message}' is now sent.")
     sent_messages.append(current_message)
 
-print("The following messages have now been sent:")
-for sent_message in sent_messages:
-    print(sent_message)
+def show_sent_messages(sent_messages):
+    print("The following messages have now been sent:")
+    for sent_message in sent_messages:
+        print(sent_message)
+
+# 8-11
+
 
