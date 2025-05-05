@@ -406,8 +406,15 @@ print(user_profile)
 
 # 8-14
 
+def make_car(manufacturer, model, **kwargs):
+    """Create a dictionary containing everything related to a car's build."""
+    kwargs["manufacturer"] = manufacturer
+    kwargs["model"] = model
+    return kwargs
 
+car = make_car("subaru", "outback", color = "blue", tow_package = True)
 
+print(car)
 
 
     
