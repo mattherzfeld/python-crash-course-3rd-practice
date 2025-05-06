@@ -417,6 +417,30 @@ car = make_car("subaru", "outback", color = "blue", tow_package = True)
 print(car)
 
 
-    
-    
+"""Example of importing from another file
+i.e.
 
+#1
+from pizza import make_pizza
+
+ make_pizza(16, 'pepperoni')
+ make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+ #2
+ from pizza import make_pizza as mp
+
+ mp(16, 'pepperoni')
+ mp(12, 'mushrooms', 'green peppers', 'extra cheese')
+
+#3
+ import pizza as p
+
+ p.make_pizza(16, 'pepperoni')
+ p.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese'
+
+#4
+ from pizza import *
+
+ make_pizza(16, 'pepperoni')
+ make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+"""
