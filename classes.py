@@ -41,7 +41,18 @@ print(f"\nYour dog's name is {your_dog.name}.")
 print(f"My dog is {your_dog.age} years old.")
 your_dog.sit()
 
+# 9-1
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
 
+    def describe_restaurant(self):
+        """prints the two attribute information"""
+        print(f"The restaurant's name is {self.restaurant_name} and serves {self.cuisine_type} cuisine.")
 
-
-
+    def open_restaurant(self):
+        """indicate that the restaurant is open"""
+        print(f"The restaurant {self.restaurant_name} is open.")
+    
+my_restaurant = Restaurant("Chick Fil-A", "southern chicken")
