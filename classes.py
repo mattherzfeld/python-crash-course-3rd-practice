@@ -56,3 +56,10 @@ class Restaurant:
         print(f"The restaurant {self.restaurant_name} is open.")
     
 my_restaurant = Restaurant("Chick Fil-A", "southern chicken")
+print(f"\nThe restaurant's name is {my_restaurant.restaurant_name}.")
+print(f"\nThe restaurant's type of food is {my_restaurant.cuisine_type}.")
+my_restaurant.describe_restaurant()
+print(f"\nIs {my_restaurant.restaurant_name} open or closed?")
+my_restaurant.open_restaurant()
+
+
