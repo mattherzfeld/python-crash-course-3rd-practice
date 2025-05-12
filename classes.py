@@ -62,4 +62,12 @@ my_restaurant.describe_restaurant()
 print(f"\nIs {my_restaurant.restaurant_name} open or closed?")
 my_restaurant.open_restaurant()
 
+# 9-2
 
+restaurant_one = Restaurant("Taco Bell", "Mexican")
+restaurant_two = Restaurant("McDonald's", "American/Burger")
+restaurant_three = Restaurant("Hattie B's", "Southern Chicken")
+
+restaurant_one.describe_restaurant()
+restaurant_two.describe_restaurant()
+restaurant_three.describe_restaurant()
