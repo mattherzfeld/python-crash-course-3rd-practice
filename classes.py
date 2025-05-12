@@ -82,8 +82,28 @@ class User:
     
     def describe_user(self):
         """Prints a summary of the user's information."""
-        pass
+        print(f"\nUser Information:")
+        print(f"\tFirst Name: {self.first_name}")
+        print(f"\tLast Name: {self.last_name}")
+        print(f"\tAge: {self.age}")
+        print(f"\tLocation: {self.location}")
 
     def greet_user(self):
         """Prints a personalized greeting to the user."""
-        pass
+        print(f"\nHello, {self.first_name} {self.last_name}!")
+
+#Instances
+person_one = User("David", "Lynch", 41, "Chicago, IL, USA")
+person_two = User("Jane", "Bobowski", 47, "Seattle, WA, USA")
+person_three = User("Maria", "Gonzales", 33, "Mexico City, Mexico")
+person_four = User("Javier", "Rodriguez", 22, "Madrid, Spain")
+
+#Method Calls
+person_one.greet_user()
+person_one.describe_user()
+person_two.greet_user()
+person_two.describe_user()
+person_three.greet_user()
+person_three.describe_user()
+person_four.greet_user()
+person_four.describe_user()
