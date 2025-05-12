@@ -71,3 +71,19 @@ restaurant_three = Restaurant("Hattie B's", "Southern Chicken")
 restaurant_one.describe_restaurant()
 restaurant_two.describe_restaurant()
 restaurant_three.describe_restaurant()
+
+# 9-3
+class User:
+    def __init__(self, first_name, last_name, age, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.location = location
+    
+    def describe_user(self):
+        """Prints a summary of the user's information."""
+        pass
+
+    def greet_user(self):
+        """Prints a personalized greeting to the user."""
+        pass
