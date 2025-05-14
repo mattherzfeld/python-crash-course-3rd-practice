@@ -157,4 +157,34 @@ print(my_new_car.get_descriptive_name())
 my_new_car.odometer_reading = 23
 my_new_car.read_odometer()
 
+# 9-4
+    # Starting with program from exercise # 9-1
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
 
+    def describe_restaurant(self):
+        """prints the two attribute information"""
+        print(f"The restaurant's name is {self.restaurant_name} and serves {self.cuisine_type} cuisine.")
+
+    def open_restaurant(self):
+        """indicate that the restaurant is open"""
+        print(f"The restaurant {self.restaurant_name} is open.")
+    
+    def set_number_served(self, customers):
+        """Sets the number of customers that have been served"""
+        self.number_served = customers
+    
+    def increment_number_served(self, customers_served):
+        """Increments the number of customers who have been served"""
+        self.number_served += customers_served
+
+restaurant = Restaurant("In-N-Out", "Burgers")
+print(f"\nThe {restaurant.restaurant_name} serves {restaurant.cuisine_type}.")
+print(f"The restaurant has served {restaurant.number_served} customers.")
+restaurant.set_number_served(5)
+print(f"The restaurant has now served {restaurant.number_served} customers.")
+restaurant.increment_number_served(12)
+print(f"The restaurant has now served {restaurant.number_served} customers.")
