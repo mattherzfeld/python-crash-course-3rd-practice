@@ -188,3 +188,42 @@ restaurant.set_number_served(5)
 print(f"The restaurant has now served {restaurant.number_served} customers.")
 restaurant.increment_number_served(12)
 print(f"The restaurant has now served {restaurant.number_served} customers.")
+
+# 9-5
+    # Starting with program from exercise # 9-3
+class User:
+    def __init__(self, first_name, last_name, age, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        self.location = location
+        self.login_attempts = 0
+    
+    def describe_user(self):
+        """Prints a summary of the user's information."""
+        print(f"\nUser Information:")
+        print(f"\tFirst Name: {self.first_name}")
+        print(f"\tLast Name: {self.last_name}")
+        print(f"\tAge: {self.age}")
+        print(f"\tLocation: {self.location}")
+
+    def greet_user(self):
+        """Prints a personalized greeting to the user."""
+        print(f"\nHello, {self.first_name} {self.last_name}!")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+    
+person_five = User("Sven", "Nater", 57, "Gothenburg, Sweden")
+person_five.greet_user()
+person_five.describe_user()
+person_five.increment_login_attempts()
+person_five.increment_login_attempts()
+person_five.increment_login_attempts()
+print(f"Instance has logged in {person_five.login_attempts} times.")
+person_five.reset_login_attempts()
+print(f"Instance has logged in {person_five.login_attempts} times.")
