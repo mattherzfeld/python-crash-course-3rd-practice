@@ -273,6 +273,23 @@ my_flavors.flavors = ['chocolate', 'strawberry', 'vanilla']
 #Call Method
 my_flavors.display_flavors()
 
+# 9-7
+
+class Admin(User):
+    """Inheritance of User class from #9-3"""
+    def __init__(self, first_name, last_name, age, location):
+        super().__init__(first_name, last_name, age, location)
+        self.privileges = []
+    
+    def show_privileges(self):
+        print(f"\nList of privileges for User - {the_privileges.first_name} {the_privileges.last_name}:\n")
+        for privilege in self.privileges:
+            print(f"\t - {privilege}\n")
+
+the_privileges = Admin("Bob", "Stover", "35", "Gary, IN")
+
+the_privileges.privileges = ["can add post", "can delete post", "can ban user"]
+the_privileges.show_privileges()
 
 
 
