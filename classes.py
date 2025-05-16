@@ -253,5 +253,26 @@ my_leaf = ElectricCar('nissan', 'leaf', 2024)
 print(my_leaf.get_descriptive_name())
 my_leaf.describe_battery()
 
+# 9-6
+
+class IceCreamStand(Restaurant): #From exercises #9-1/9-4
+    """Initialize attributes from parent class first - then child class attributes."""
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
+
+    def display_flavors(self):
+        print(f"\nIce Cream flavors selected:\n")
+        for flavor in self.flavors:
+            print(f"\t - {flavor.title()}\n")
+
+#Create Instance and populate flavors list
+my_flavors = IceCreamStand("Pop's Ice Cream", "ice cream")
+my_flavors.flavors = ['chocolate', 'strawberry', 'vanilla']
+
+#Call Method
+my_flavors.display_flavors()
+
+
 
 
