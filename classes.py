@@ -238,7 +238,7 @@ class ElectricCar(Car):
         Then initialize attributes specific to an electric car.
         """
         super().__init__(make, model, year)
-        self.battery_size = 40
+        self.battery = Battery()
 
     def describe_battery(self):
         """Print a statement describing the battery size."""
@@ -249,9 +249,9 @@ class ElectricCar(Car):
         print("This car doesn't have a gas tank!") 
         #If we did have a fill_gas_tank method in the car class, Python will ignore if that method is called for an electric car.
 
-my_leaf = ElectricCar('nissan', 'leaf', 2024)
-print(my_leaf.get_descriptive_name())
-my_leaf.describe_battery()
+#my_leaf = ElectricCar('nissan', 'leaf', 2024)
+#print(my_leaf.get_descriptive_name())
+#my_leaf.describe_battery()
 
 # 9-6
 
@@ -279,17 +279,66 @@ class Admin(User):
     """Inheritance of User class from #9-3"""
     def __init__(self, first_name, last_name, age, location):
         super().__init__(first_name, last_name, age, location)
-        self.privileges = []
+        self.privileges = Privileges()
     
+
+
+# 9-8
+
+class Privileges:
+    def __init__(self, privileges = []):
+        self.privileges = privileges
+
     def show_privileges(self):
-        print(f"\nList of privileges for User - {the_privileges.first_name} {the_privileges.last_name}:\n")
+        print(f"\nAn admin, compared to a normal user, has the following privileges:\n")
         for privilege in self.privileges:
             print(f"\t - {privilege}\n")
 
-the_privileges = Admin("Bob", "Stover", "35", "Gary, IN")
+#Create new instance of class
+neo = Admin("Russell", "Wilson", 36, "New York, NY")
 
-the_privileges.privileges = ["can add post", "can delete post", "can ban user"]
-the_privileges.show_privileges()
+new_privileges_list = ["Can see IP", "Can ban (within reason)", "can see hidden users"]
 
+neo.privileges.privileges = new_privileges_list
 
+neo.privileges.show_privileges()
 
+# 9-9
+
+class Battery:
+    """Model a battery for an electric car."""
+    def __init__(self, battery_size = 40):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 40:
+            range = 150
+        elif self.battery_size == 65:
+            range = 225
+
+        print(f"This car an go about {range} miles on a full charge.")
+
+    def upgrade_battery(self):
+        """Method to check battery size and set capacity, if necessary"""
+        if self.battery_size < 65:
+            self.battery_size = 65
+            print("Your battery has been upgraded.")
+        else:
+            print("Your battery can't be upgraded.")
+
+#Create an instance of class ElectricCar
+elec_car = ElectricCar("Tesla", "Model Y", 2024)
+
+#Call method to display our instance's range
+elec_car.battery.get_range()
+
+#Call method to upgrade the battery (and thus our range)
+elec_car.battery.upgrade_battery()
+
+#Call get_range method again to see if our upgrade worked (and our range increased)
+elec_car.battery.get_range()
