@@ -26,4 +26,14 @@ admin_example = Ad("Bobby", "Boucher", 29, "Florida")
 
 admin_example.privileges.show_privileges()
 
+# 9-12
+
+from classes import User as US
+
+The_guy = US("Robert", "Diamond", 25, "New Orleans, LA")
+
+The_guy.greet_user()
+The_guy.describe_user()
+
+
 
