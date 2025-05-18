@@ -45,4 +45,21 @@ players = ["charles", "martina", "michael", "florence", "eli"]
 first_up = choice(players)
 print(first_up)
 
+# 9-13
 
+class Die:
+    def __init__(self, sides = 6):
+        self.sides = sides
+
+    def roll_die(self):
+        number = randint(1, self.sides)
+        print(f"Rolling the die...\nResult: {number}.")
+
+#Create a 6-sided die
+six_sided_die = Die()
+
+#Roll the die 10 times
+print("\n\nRolling the die: \n")
+
+for number in range(10):
+    six_sided_die.roll_die()
