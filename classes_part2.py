@@ -35,5 +35,14 @@ The_guy = US("Robert", "Diamond", 25, "New Orleans, LA")
 The_guy.greet_user()
 The_guy.describe_user()
 
+# Python Standard Library
+
+from random import randint
+print(randint(1, 6))
+
+from random import choice
+players = ["charles", "martina", "michael", "florence", "eli"]
+first_up = choice(players)
+print(first_up)
 
 
