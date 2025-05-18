@@ -7,10 +7,23 @@ my_new_car.odometer_reading = 23
 my_new_car.read_odometer()
 
 #Another example
-from classes import Car, ElectricCar
+from classes import ElectricCar as EC #importing under an alias
 
 my_mustang = Car("ford", "mustang", 2024)
 print(my_mustang.get_descriptive_name())
-my_leaf = ElectricCar("nissan", "leaf", 2024)
+my_leaf = EC("nissan", "leaf", 2024) #used the alias
 print(my_leaf.get_descriptive_name())
+
+# 9-10
+    #Skipped as it is just importing module practice
+
+# 9-11
+
+from classes import Privileges as Priv
+from classes import Admin as Ad
+
+admin_example = Ad("Bobby", "Boucher", 29, "Florida")
+
+admin_example.privileges.show_privileges()
+
 
