@@ -63,3 +63,26 @@ print("\n\nRolling the die: \n")
 
 for number in range(10):
     six_sided_die.roll_die()
+
+# 9-14
+
+from random import choice
+
+# Possible lottery selections
+lottery_characters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "A", "B", "C", "D", "E"]
+
+# List that will have the 4 winning elements
+winning_characters = []
+
+while len(winning_characters) < 4:
+    character = choice(lottery_characters)
+
+    # Prevent any duplication of winning_characters
+    if character not in winning_characters:
+        winning_characters.append(character)
+
+# Display and selection winning characters:
+print("Here are today's winning lottery numbers:")
+
+for character in winning_characters:
+    print(character)
