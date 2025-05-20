@@ -86,3 +86,25 @@ print("Here are today's winning lottery numbers:")
 
 for character in winning_characters:
     print(character)
+
+# 9-15
+
+my_ticket = ["C"]
+
+#initialize the number of times the following for loop runs:
+count = 0
+
+for ticket in winning_characters:
+
+    count += 1
+
+# 9-16
+    # This exercise centers around exploring the Python Standard Library
+    # https://pymotw.com
+
+import time #time is a fun/important module to import
+
+print("Python is thinking...")
+time.sleep(5) #This will then wait 5 seconds
+print("Aha! After further consideration, Python is still the best language!")
+
