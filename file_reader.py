@@ -7,12 +7,21 @@ from pathlib import Path
 
 #Needed to use 'r' to make it a raw string, which tells Python to interpret backslashes as literal characters.
 path = Path(r"C:\Users\Matt\Documents\GitHub\text_files\pi_digits.txt")
+#This is the absolute path
+#YOU should really use forward slashes instead of backslashes for file paths to avoid this problem.
 
 contents = path.read_text()
 contents = contents.rstrip() #read_txt returns an empty string at the end when it reaches end of file
-print(contents)
+#print(contents)
 
 #Alternatively for the above, we could have simply applied the method immediately.
 #This is called, method chaining:
 #contents = path.read_text().rstrip()
 
+lines = contents.splitlines()
+pi_string = ""
+for line in lines:  
+    pi_string += line.lstrip()
+
+print(pi_string)
+print(len(pi_string))
