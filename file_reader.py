@@ -1,5 +1,18 @@
 from pathlib import Path
 
-path = Path('pi_digits.txt')
+#The below would work if the text file was directly in the workspace
+#path = Path('pi_digits.txt')
+
+#However, it is located in text_files folder, so we need the below:
+
+#Needed to use 'r' to make it a raw string, which tells Python to interpret backslashes as literal characters.
+path = Path(r"C:\Users\Matt\Documents\GitHub\text_files\pi_digits.txt")
+
 contents = path.read_text()
+contents = contents.rstrip() #read_txt returns an empty string at the end when it reaches end of file
 print(contents)
+
+#Alternatively for the above, we could have simply applied the method immediately.
+#This is called, method chaining:
+#contents = path.read_text().rstrip()
+
