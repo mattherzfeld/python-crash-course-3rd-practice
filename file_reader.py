@@ -47,3 +47,9 @@ print(contents_1)
 
 
 # 10-3
+
+path = Path('pi_digits.txt')
+contents = path.read_text()
+
+for line in contents.splitlines(): #this is more concise that what we originally used
+  print(line)
