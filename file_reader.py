@@ -33,3 +33,17 @@ if birthday in pi_string:
     print("Your birthday appears in the first million digits of pi!")
 else:
     print("Your birthday does not appear in the first million digits of pi.")
+
+# 10-1
+
+path_1 = Path(r"C:\Users\Matt\Documents\GitHub\text_files\learning_python.txt")
+contents_1 = path_1.read_text()
+print(contents_1)
+
+# 10-2
+
+contents_1 = path_1.read_text().replace("Python", "C") #replacing Python with C by using method chaining
+print(contents_1)
+
+
+# 10-3
