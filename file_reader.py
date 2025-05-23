@@ -48,8 +48,22 @@ print(contents_1)
 
 # 10-3
 
-path = Path('pi_digits.txt')
-contents = path.read_text()
+#path = Path('pi_digits.txt')
+#contents = path.read_text()
 
-for line in contents.splitlines(): #this is more concise that what we originally used
-  print(line)
+#for line in contents.splitlines(): #this is more concise that what we originally used
+#  print(line)
+
+# Writing to a File
+from pathlib import Path
+
+path = Path("programming.txt") #this writes/creates a new text file
+path.write_text("I love programming.") 
+
+contents = "I love programming.\n"
+contents += "I love creating new games.\n"
+contents += "I also love working with data.\n"
+
+path = Path("programming.txt")
+path.write_text(contents)
+
