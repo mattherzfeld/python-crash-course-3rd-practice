@@ -67,3 +67,11 @@ contents += "I also love working with data.\n"
 path = Path("programming.txt")
 path.write_text(contents)
 
+# 10-4
+question = input("What is your name?" )
+
+filename = "guest.txt"
+
+with open(filename, "w") as f:
+    f.write(question)
+
