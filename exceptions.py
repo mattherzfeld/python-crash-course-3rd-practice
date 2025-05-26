@@ -47,3 +47,23 @@ for filename in filenames:
      path = Path(filename)
      count_words(path)
 
+
+# 10-6
+
+
+
+
+
+# 10-7
+
+
+
+
+# 10-8
+
+
+# 10-9
+
+
+
+# 10-10
