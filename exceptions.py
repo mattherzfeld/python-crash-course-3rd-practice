@@ -22,7 +22,7 @@ while True:
         print("You can't divide by 0!")
     else:
         print(answer)
-
+        break
 
 # Handling the FileNotFoundError Exception
 
@@ -66,7 +66,7 @@ while True:
         print("\nSorry, you must give me two integers.")
     else:
         print(f"\nSum: {answer}")
-
+        break
 # 10-7
 
 #Previous exercise (#10-6) is already using the while loop.
@@ -74,12 +74,36 @@ while True:
 
 # 10-8
 
+filenames = ['cats.txt', 'dogs.txt']
 
+for filename in filenames:
+    print("\nReading file: " + filename)
+    try:
+        with open(filename) as f:
+            contents = f.read()
+            print(contents)
+    except FileNotFoundError:
+        print("  Sorry, I can't find that file.")
 
 
 # 10-9
 
+# "Quiet Fail" version
+filenames = ['cats.txt', 'dogs.txt']
 
+for filename in filenames:
+    print("\nReading file: " + filename)
+    try:
+        with open(filename) as f:
+            contents = f.read()
+
+    except FileNotFoundError:
+        pass
+
+    else:
+        print("\nReading File: " + filename)
+        print(contents)
 
 # 10-10
 #Once again use gutenberg.org
+#No answer provided for this exercise
