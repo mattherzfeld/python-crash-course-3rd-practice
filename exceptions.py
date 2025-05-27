@@ -107,3 +107,15 @@ for filename in filenames:
 # 10-10
 #Once again use gutenberg.org
 #No answer provided for this exercise
+
+# Storing Data
+# JSON = JavaScript Object Notation
+from pathlib import Path
+import json
+
+numbers = [2, 3, 5, 7, 11, 13]
+
+path = Path("numbers.json")
+contents = json.dumps(numbers)
+path.write_text(contents)
+
