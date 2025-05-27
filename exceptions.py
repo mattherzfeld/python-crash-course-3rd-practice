@@ -110,6 +110,8 @@ for filename in filenames:
 
 # Storing Data
 # JSON = JavaScript Object Notation
+
+#writer
 from pathlib import Path
 import json
 
@@ -119,3 +121,49 @@ path = Path("numbers.json")
 contents = json.dumps(numbers)
 path.write_text(contents)
 
+#reader
+from pathlib import Path
+import json
+
+path = Path('numbers.json')
+contents = path.read_text()
+numbers = json.loads(contents)
+print(numbers)
+
+#Saving and using user-generated data
+from pathlib import Path
+import json
+
+username = input("What is your name? ")
+
+path = Path('username.json')
+contents = json.dumps(username)
+path.write_text(contents)
+
+print(f"We'll remember you when you come back, {username}!")
+
+#Here's a greeting if the user is coming back (is recognized)
+from pathlib import Path
+import json
+
+path = Path('username.json')
+contents = path.read_text()
+username = json.loads(contents)
+
+print(f"Welcome back, {username}!")
+
+#Combining the last two programs
+
+from pathlib import Path
+import json
+
+path = Path('username.json')
+if path.exists():
+    contents = path.read_text()
+    username = json.loads(contents)
+    print(f"Welcome back, {username}!")
+else: 
+    username = input("What is your name? ")
+    contents = json.dumps(username)
+    path.write_text(contents)
+    print(f"We'll remember you when you come back, {username}!")
