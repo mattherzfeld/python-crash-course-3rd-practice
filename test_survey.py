@@ -1,4 +1,10 @@
+import pytest
 from survey import AnonymousSurvey
+
+@pytest.fixture
+def language_survey():
+    """A survey that will be available to test all functions."""
+
 
 def test_store_single_response():
      """Test that a single response is stored properly."""
